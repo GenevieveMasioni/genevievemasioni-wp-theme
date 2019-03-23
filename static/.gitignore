@@ -1,0 +1,13 @@
+# Dot files
+/*DS_Store
+/.*.html
+/*/.*
+/*/*/.*
+/*/*/*/.*
+
+# Config files
+atom-live-server.json
+gulpfile.js
+
+# DevDependencies
+/node_modules

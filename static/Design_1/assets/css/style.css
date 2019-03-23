@@ -1,0 +1,427 @@
+/************************************************************
+
+Theme name : Darkfolio
+Description : Thème WordPress sombre adapté pour les portfolios
+de projet
+Author: Genevieve Masioni
+Author URI : http://genevievemasioni.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+Tags: dark, portfolio, big images
+
+**************************************************************
+
+Table of Contents:
+
+  0. GLOBAL
+  1. GENERAL RULES
+    1.1 Headings
+    1.2 Elements
+    1.3 LLinks & buttons
+    1.4 Menus
+  2. HEADER
+  3. MAIN
+    3.1 Project
+    3.2 Post
+    3.3 Page
+  4. FOOTER
+    4.1 Widget
+
+**************************************************************/
+
+
+/************************************************
+0.	GLOBAL
+************************************************/
+
+:root {
+  --base-font-size: 14px;
+  --base-font-family: "Helvetica-Light", Arial, sans-serif;
+  --title-font-family: "Helvetica-Bold", sans-serif;
+  --base-padding: 1rem;
+  --base-margin: 2rem;
+  --large-padding: 3rem;
+  --large-margin: 6rem;
+  --color-primary: #2465f7;
+  --color-scnd: #1878ff;
+  --color-bg: black;
+  --color-text: white;
+  --color-grey: #717171;
+  --shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  --shadow-blur: 0 30px 60px 0 rgba(0,0,0,0.11);
+  --radius: .3rem;
+}
+
+html, body {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: var(--base-font-family);
+  /* background-color: var(--color-bg); */
+  /* color: var(--color-text); */
+  padding: var(--large-padding);
+  background: #fcfcfc;
+  overflow-x: hidden;
+}
+
+* {
+  transition: box-shadow 400ms cubic-bezier(0.33,0,0.2,1),
+  transform 1200ms cubic-bezier(0.8,0,0.07,1),
+  opacity 600ms cubic-bezier(0.694,0.0482,0.335,1) 500ms,
+  top 300ms cubic-bezier(0.33,0,0.2,1) 50ms,
+  -webkit-transform 1200ms cubic-bezier(0.8,0,0.07,1);
+}
+
+header, main {
+  margin-bottom: var(--base-margin);
+}
+
+/************************************************
+1. GENERAL RULES
+************************************************/
+
+/************************************************
+1.1	Headings
+************************************************/
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('../fonts/Helvetica-Bold.eot');
+  src: url('../fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg'),
+       url('../fonts/Helvetica-Bold.ttf') format('truetype'),
+       url('../fonts/Helvetica-Bold.woff') format('woff'),
+       url('../fonts/Helvetica-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-BoldOblique';
+  src: url('../fonts/Helvetica-BoldOblique.eot');
+  src: url('../fonts/Helvetica-BoldOblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-BoldOblique.svg#Helvetica-BoldOblique') format('svg'),
+       url('../fonts/Helvetica-BoldOblique.ttf') format('truetype'),
+       url('../fonts/Helvetica-BoldOblique.woff') format('woff'),
+       url('../fonts/Helvetica-BoldOblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url('../fonts/Helvetica-Light.eot');
+  src: url('../fonts/Helvetica-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-Light.svg#Helvetica-Light') format('svg'),
+       url('../fonts/Helvetica-Light.ttf') format('truetype'),
+       url('../fonts/Helvetica-Light.woff') format('woff'),
+       url('../fonts/Helvetica-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-LightOblique';
+  src: url('../fonts/Helvetica-LightOblique.eot');
+  src: url('../fonts/Helvetica-LightOblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-LightOblique.svg#Helvetica-LightOblique') format('svg'),
+       url('../fonts/Helvetica-LightOblique.ttf') format('truetype'),
+       url('../fonts/Helvetica-LightOblique.woff') format('woff'),
+       url('../fonts/Helvetica-LightOblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Oblique';
+  src: url('../fonts/Helvetica-Oblique.eot');
+  src: url('../fonts/Helvetica-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-Oblique.svg#Helvetica-Oblique') format('svg'),
+       url('../fonts/Helvetica-Oblique.ttf') format('truetype'),
+       url('../fonts/Helvetica-Oblique.woff') format('woff'),
+       url('../fonts/Helvetica-Oblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.eot');
+  src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica.svg#Helvetica') format('svg'),
+       url('../fonts/Helvetica.ttf') format('truetype'),
+       url('../fonts/Helvetica.woff') format('woff'),
+       url('../fonts/Helvetica.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font-family);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.site-title {
+  font-size: 1rem;
+}
+
+/************************************************
+1.2	Elements
+************************************************/
+
+hr {
+  margin: var(--base-margin) auto;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+}
+
+/************************************************
+1.3	Links & buttons
+************************************************/
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-scnd);
+}
+
+.btn-primary {
+  border: none;
+  background: var(--color-primary);
+  border-radius: 3rem;
+  padding: var(--base-padding);
+}
+
+.btn-primary a {
+  color: var(--color-text);
+}
+
+.button {
+  color: var(--color-text);
+  background: var(--color-primary);
+  border: none;
+  padding: .5rem var(--base-padding);
+  border-radius: var(--radius);
+}
+
+.button:hover {
+  background: var(--color-scnd);
+}
+
+
+/************************************************
+1.4	Menus
+************************************************/
+
+.menu-header {
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.menu-header li {
+  display: inline;
+  margin: auto var(--base-padding);
+}
+
+
+/************************************************
+2.	HEADER
+************************************************/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: .05rem solid white;
+}
+.logo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+/************************************************
+3.	MAIN
+************************************************/
+
+main {
+  /* background: rebeccapurple; */
+  padding: var(--large-margin) var(--base-padding);
+  background: #f6f6f6;
+}
+
+/************************************************
+3.1	Project
+************************************************/
+
+.project {
+  /* background: black; */
+  padding: var(--large-padding);
+  box-shadow: 0 20px 20px rgba(0,0,0,0.075);
+  width: 70%;
+  margin: auto auto var(--large-margin);
+  background: #fefefe;
+}
+
+.project:hover {
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.11);
+  transform: scale(.99);
+}
+
+.project section {
+  margin-bottom: var(--base-margin);
+}
+
+.project-header, .post-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-title, .project-type,
+.project-date, .project-role,
+.project-roles {
+  margin: .5rem auto;
+}
+
+.project-type {
+  font-family: "Helvetica-LightOblique", sans-serif;
+}
+
+.project-date, .project-roles {
+  font-family: "Helvetica", sans-serif;
+}
+
+.project-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured-img-wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.project-excerpt {
+  margin: var(--base-margin) auto;
+  padding-left: 70%;
+  text-align: justify;
+}
+
+.project-footer {
+  text-align: right;
+}
+
+.project-category a {
+  color: var(--color-grey);
+}
+
+/************************************************
+3.2	Post
+************************************************/
+
+.post {
+  width: 70%;
+  margin: auto;
+}
+
+.post p {
+  width: 80%;
+  margin: var(--base-margin) auto;
+}
+
+.post-header {
+  margin: var(--base-margin) auto;
+  width: 80%;
+}
+
+p.post-pitch {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70%;
+  margin: var(--large-margin) auto;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--large-margin);
+}
+
+/************************************************
+3.3	Page
+************************************************/
+
+.page {
+  width: 70%;
+  margin: auto;
+}
+
+.page-header {
+  margin-bottom: var(--large-margin);
+}
+
+/************************************************
+4.	FOOTER
+************************************************/
+
+footer {
+  margin-top: var(--large-margin);
+}
+
+footer a {
+  color: var(--color-grey);
+}
+
+.copyright {
+  margin-top: var(--base-margin);
+}
+
+/************************************************
+4.1	Widget
+************************************************/
+
+.widgets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widget {
+  margin-right: var(--large-margin);
+  max-width: 33%;;
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget li {
+  margin: var(--base-padding) auto;
+}
+
+.widgets:last-child {
+  align-self: flex-end;
+}

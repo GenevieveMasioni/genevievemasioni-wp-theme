@@ -1,0 +1,495 @@
+/************************************************************
+
+Theme name : Darkfolio
+Description : Thème WordPress sombre adapté pour les portfolios
+de projet
+Author: Genevieve Masioni
+Author URI : http://genevievemasioni.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
+Tags: dark, portfolio, big images
+
+**************************************************************
+
+Table of Contents:
+
+  0. GLOBAL
+  1. GENERAL RULES
+    1.1 Headings
+    1.2 Elements
+    1.3 LLinks & buttons
+    1.4 Menus
+  2. HEADER
+  3. MAIN
+    3.1 Project
+    3.2 Post
+    3.3 Page
+  4. FOOTER
+    4.1 Widget
+
+**************************************************************/
+
+
+/************************************************
+0.	GLOBAL
+************************************************/
+
+:root {
+  --base-font-size: 14px;
+  --base-font-family: "Helvetica-Light", Arial, sans-serif;
+  --title-font-family: "Helvetica-Bold", sans-serif;
+  --base-padding: 1rem;
+  --base-margin: 2rem;
+  --large-padding: 3rem;
+  --large-margin: 6rem;
+  --color-primary: #2465f7;
+  --color-scnd: #97c2ff;
+  --color-spice: #222020;
+  --color-bg: black;
+  --color-text: #fcfcfc;
+  --color-grey: #717171;
+  --shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  --shadow-blur: 0 30px 60px 0 rgba(0,0,0,0.11);
+  --radius: .3rem;
+  --border: .07rem solid var(--color-text);
+}
+
+html, body {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: var(--base-font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+* {
+  transition: box-shadow 400ms cubic-bezier(0.33,0,0.2,1),
+  transform 1200ms cubic-bezier(0.8,0,0.07,1),
+  opacity 600ms cubic-bezier(0.694,0.0482,0.335,1) 500ms,
+  top 300ms cubic-bezier(0.33,0,0.2,1) 50ms,
+  -webkit-transform 1200ms cubic-bezier(0.8,0,0.07,1);
+}
+
+/************************************************
+1. GENERAL RULES
+************************************************/
+
+/************************************************
+1.1	Headings
+************************************************/
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('../fonts/Helvetica-Bold.eot');
+  src: url('../fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg'),
+       url('../fonts/Helvetica-Bold.ttf') format('truetype'),
+       url('../fonts/Helvetica-Bold.woff') format('woff'),
+       url('../fonts/Helvetica-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-BoldOblique';
+  src: url('../fonts/Helvetica-BoldOblique.eot');
+  src: url('../fonts/Helvetica-BoldOblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-BoldOblique.svg#Helvetica-BoldOblique') format('svg'),
+       url('../fonts/Helvetica-BoldOblique.ttf') format('truetype'),
+       url('../fonts/Helvetica-BoldOblique.woff') format('woff'),
+       url('../fonts/Helvetica-BoldOblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url('../fonts/Helvetica-Light.eot');
+  src: url('../fonts/Helvetica-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-Light.svg#Helvetica-Light') format('svg'),
+       url('../fonts/Helvetica-Light.ttf') format('truetype'),
+       url('../fonts/Helvetica-Light.woff') format('woff'),
+       url('../fonts/Helvetica-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-LightOblique';
+  src: url('../fonts/Helvetica-LightOblique.eot');
+  src: url('../fonts/Helvetica-LightOblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-LightOblique.svg#Helvetica-LightOblique') format('svg'),
+       url('../fonts/Helvetica-LightOblique.ttf') format('truetype'),
+       url('../fonts/Helvetica-LightOblique.woff') format('woff'),
+       url('../fonts/Helvetica-LightOblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Oblique';
+  src: url('../fonts/Helvetica-Oblique.eot');
+  src: url('../fonts/Helvetica-Oblique.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica-Oblique.svg#Helvetica-Oblique') format('svg'),
+       url('../fonts/Helvetica-Oblique.ttf') format('truetype'),
+       url('../fonts/Helvetica-Oblique.woff') format('woff'),
+       url('../fonts/Helvetica-Oblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.eot');
+  src: url('../fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Helvetica.svg#Helvetica') format('svg'),
+       url('../fonts/Helvetica.ttf') format('truetype'),
+       url('../fonts/Helvetica.woff') format('woff'),
+       url('../fonts/Helvetica.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font-family);
+  font-weight: normal;
+  text-transform: uppercase;
+  /* margin-left: var(--base-margin); */
+}
+
+/************************************************
+1.2	Elements
+************************************************/
+
+hr {
+  margin: var(--base-margin) auto;
+}
+
+blockquote {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  text-align: left;
+}
+
+form * {
+  background: transparent;
+  border: none;
+  border: var(--border);
+  color: var(--color-text);
+}
+
+textarea {
+  width: 100%;
+}
+
+/************************************************
+1.3	Links & buttons
+************************************************/
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-scnd);
+}
+
+.btn-primary {
+  border: none;
+  background: var(--color-primary);
+  border-radius: 3rem;
+  padding: var(--base-padding);
+}
+
+.btn-primary a {
+  color: var(--color-text);
+}
+
+.button {
+  color: var(--color-text);
+  background: var(--color-primary);
+  border: none;
+  padding: .5rem var(--base-padding);
+  border-radius: var(--radius);
+}
+
+.button:hover {
+  background: var(--color-scnd);
+}
+
+
+/************************************************
+1.4	Menus
+************************************************/
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.menu-header li {
+  display: inline;
+  margin: auto var(--base-padding);
+}
+
+.sub-menu {
+  padding: 0;
+  margin-bottom: var(--base-margin);
+  display: none;
+  position: fixed;
+  bottom: var(--base-margin);
+}
+
+.sub-menu li {
+  display: inherit;
+  margin: 0;
+}
+
+
+/************************************************
+2.	HEADER
+************************************************/
+
+header {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/************************************************
+3.	MAIN
+************************************************/
+
+.light-toggle {
+  position: fixed;
+  margin: var(--base-margin);
+  cursor: pointer;
+  width: 2rem;
+}
+
+/************************************************
+3.1	Layout
+************************************************/
+
+.section {
+  overflow: hidden;
+}
+
+.section a {
+  text-decoration: underline;
+  color: #fcfcfc;
+}
+
+.column {
+  width: 33.33%;
+}
+
+.tint {
+  background: var(--color-primary);
+  color: #fcfcfc;
+}
+
+.spice {
+  background: var(--color-spice);
+  color: #fcfcfc;
+}
+
+.text-col {
+  overflow-y: scroll;
+  padding-top: var(--large-margin);
+}
+
+.img-col, .img-col .widget {
+  display: inline;
+}
+
+.column > p, .text-col > *, .widget > * {
+  width: 49.95%;
+  margin: var(--base-margin) auto;
+}
+
+.text-col img , .widget img {
+  width: 100%;
+}
+
+article {
+  display: flex;
+}
+
+.featured-img, .project-img, .img-col img {
+  height: 100%;
+}
+
+.img-col img  {
+  width: auto;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.column li:before {
+  content: "\f061"; /* FontAwesome Unicode */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  padding-right: var(--base-padding);
+}
+
+/************************************************
+3.1	Project
+************************************************/
+
+.project .col-2 {
+  width: 66.66%;
+}
+
+.project-infos > * {
+  margin: .5rem auto;
+}
+
+.project-type {
+  font-family: "Helvetica-LightOblique", sans-serif;
+}
+
+.project-role {
+  margin-top: var(--base-margin);
+}
+
+.project-date, .project-roles {
+  font-family: "Helvetica", sans-serif;
+}
+/*
+.project-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured-img-wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.project-excerpt {
+  margin: var(--base-margin) auto;
+  padding-left: 70%;
+  text-align: justify;
+}
+
+.project-footer {
+  text-align: right;
+}
+
+.project-category a {
+  color: var(--color-grey);
+} */
+
+/************************************************
+3.2	Post
+************************************************/
+
+/* .post {
+  width: 70%;
+  margin: auto;
+}
+
+.post p {
+  width: 80%;
+  margin: var(--base-margin) auto;
+}
+
+.post-header {
+  margin: var(--base-margin) auto;
+  width: 80%;
+}
+
+p.post-pitch {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70%;
+  margin: var(--large-margin) auto;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--large-margin);
+} */
+
+/************************************************
+3.3	Page
+************************************************/
+
+/* .page {
+  width: 70%;
+  margin: auto;
+}
+
+.page-header {
+  margin-bottom: var(--large-margin);
+} */
+
+/************************************************
+4.	FOOTER
+************************************************/
+
+/* footer {
+  margin-top: var(--large-margin);
+}
+
+footer a {
+  color: var(--color-grey);
+}
+
+.copyright {
+  margin-top: var(--base-margin);
+} */
+
+/************************************************
+4.1	Widget
+************************************************/
+
+.widgets {
+  display: flex;
+}
+
+.widget {
+  width: 100%;
+  overflow: hidden scroll;
+}
+
+.widget-section-2 .col-1 {
+  width: 66.66%;
+  display: flex;
+  align-items: center;
+}
+/*
+.widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget li {
+  margin: var(--base-padding) auto;
+}
+
+.widgets:last-child {
+  align-self: flex-end;
+} */

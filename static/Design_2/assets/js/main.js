@@ -6,6 +6,7 @@ window.onload = function() {
   const projectsLink = document.querySelector(".projects");
   const submenu = document.querySelector(".sub-menu");
 
+  if(window.innerWidth >= 1050)
   sections.forEach((sec) => sec.style.height = window.innerHeight + "px");
 
   function lightOn() {

@@ -314,7 +314,7 @@ header {
   padding-top: var(--large-margin);
 }
 
-.img-col, .img-col .widget {
+.img-col, .img-col * {
   display: inline;
   overflow: hidden;
 }
@@ -373,62 +373,27 @@ ul {
 .project-date, .project-roles {
   font-family: "Helvetica", sans-serif;
 }
-/*
-.project-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.featured-img-wrapper {
-  margin: 0 auto;
-  width: 70%;
-}
-
-.project-excerpt {
-  margin: var(--base-margin) auto;
-  padding-left: 70%;
-  text-align: justify;
-}
-
-.project-footer {
-  text-align: right;
-}
-
-.project-category a {
-  color: var(--color-grey);
-} */
 
 /************************************************
-3.2	Post
+3.2	Galery
 ************************************************/
 
-/* .post {
-  width: 70%;
-  margin: auto;
-}
-
-.post p {
-  width: 80%;
-  margin: var(--base-margin) auto;
-}
-
-.post-header {
-  margin: var(--base-margin) auto;
-  width: 80%;
-}
-
-p.post-pitch {
-  font-size: 1.5rem;
-  text-align: center;
-  width: 70%;
-  margin: var(--large-margin) auto;
-}
-
-.post-footer {
+.galery-nav {
+  font-size: 3rem;
+  position: absolute;
+  right: 0;
   display: flex;
-  justify-content: space-between;
-  margin-top: var(--large-margin);
-} */
+  flex-wrap: wrap;
+  height: 100%;
+  width: 2rem;
+  margin: auto var(--base-margin);
+}
+
+.galery-nav a {
+  color: black;
+  text-decoration: none;
+  align-self: center;
+}
 
 /************************************************
 3.3	Page

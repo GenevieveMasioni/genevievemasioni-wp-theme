@@ -188,12 +188,29 @@ tr {
 form * {
   background: transparent;
   border: none;
-  border: var(--border);
   color: var(--color-text);
+}
+
+input, textarea {
+  border: var(--border);
+}
+
+input, textarea {
+  border-bottom: var(--border);
 }
 
 textarea {
   width: 100%;
+}
+
+button {
+  border: var(--border);
+  padding: var(--base-padding) var(--base-margin);
+}
+
+button:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 /************************************************
@@ -349,6 +366,17 @@ ul {
 .column li:before {
   content: "→";
   padding-right: var(--base-padding);
+}
+
+.profile-resume {
+  background: var(--color-accent) url("images/mug.jpg") center;
+  background-size: cover;
+  /* background-blend-mode: overlay; */
+  filter: grayscale(100%);
+}
+
+.profile-resume:hover {
+  filter: grayscale(0);
 }
 
 /************************************************

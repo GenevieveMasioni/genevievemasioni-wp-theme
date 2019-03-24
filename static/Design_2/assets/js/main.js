@@ -10,14 +10,18 @@ window.onload = function() {
 
   function lightOn() {
     light.classList.replace("fa-sun", "fa-moon");
+    root.style.setProperty('--color-primary', 'black');
     root.style.setProperty('--color-bg', '#fcfcfc');
     root.style.setProperty('--color-text', '#222020');
+    root.style.setProperty('--color-accent', '#f6f6f6');
   }
 
   function lightOff() {
     light.classList.replace("fa-moon", "fa-sun");
+    root.style.setProperty('--color-primary', 'white');
     root.style.setProperty('--color-bg', 'black');
     root.style.setProperty('--color-text', '#fcfcfc');
+    root.style.setProperty('--color-accent', '#222020');
   }
 
   var lightMode = false;
@@ -38,12 +42,7 @@ window.onload = function() {
     }
   }
 
-
   light.addEventListener("click", lightHandler);
   projectsLink.addEventListener("click", submenuHandler);
-  window.addEventListener('scroll', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  });
+
 }

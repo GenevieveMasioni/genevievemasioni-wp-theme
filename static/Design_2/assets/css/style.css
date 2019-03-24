@@ -43,9 +43,9 @@ Table of Contents:
   --base-margin: 2rem;
   --large-padding: 3rem;
   --large-margin: 6rem;
-  --color-primary: #2465f7;
-  --color-scnd: #97c2ff;
-  --color-spice: #222020;
+  --color-primary: #fff;
+  --color-scnd: #ffcf00;
+  --color-accent: #222020;
   --color-bg: black;
   --color-text: #fcfcfc;
   --color-grey: #717171;
@@ -63,7 +63,7 @@ body {
   font-family: var(--base-font-family);
   background: var(--color-bg);
   color: var(--color-text);
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
 }
 
@@ -294,7 +294,6 @@ header {
 
 .section a {
   text-decoration: underline;
-  color: #fcfcfc;
 }
 
 .column {
@@ -306,9 +305,8 @@ header {
   color: #fcfcfc;
 }
 
-.spice {
-  background: var(--color-spice);
-  color: #fcfcfc;
+.accent {
+  background: var(--color-accent);
 }
 
 .text-col {
@@ -318,6 +316,7 @@ header {
 
 .img-col, .img-col .widget {
   display: inline;
+  overflow: hidden;
 }
 
 .column > p, .text-col > *, .widget > * {
@@ -338,7 +337,7 @@ article {
 }
 
 .img-col img  {
-  width: auto;
+  object-fit: cover;
   margin: 0;
 }
 
@@ -347,9 +346,7 @@ ul {
 }
 
 .column li:before {
-  content: "\f061"; /* FontAwesome Unicode */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
+  content: "→";
   padding-right: var(--base-padding);
 }
 
@@ -477,8 +474,6 @@ footer a {
 
 .widget-section-2 .col-1 {
   width: 66.66%;
-  display: flex;
-  align-items: center;
 }
 /*
 .widget ul {

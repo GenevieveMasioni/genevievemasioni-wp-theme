@@ -8,6 +8,8 @@ window.onload = function() {
 
   if(window.innerWidth >= 1050)
   sections.forEach((sec) => sec.style.height = window.innerHeight + "px");
+  else
+  sections.forEach((sec) => sec.style.minHeight = window.innerHeight + "px");
 
   function lightOn() {
     light.classList.replace("fa-sun", "fa-moon");

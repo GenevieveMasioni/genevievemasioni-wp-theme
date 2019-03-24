@@ -10,6 +10,12 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/assets/css/responsive.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style media="screen">
+    .profile-resume {
+      background-image: url("<?php echo get_theme_mod('profile_resume',
+    get_bloginfo('template_url').'/images/mug.jpg'); ?>");
+    }
+  </style>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

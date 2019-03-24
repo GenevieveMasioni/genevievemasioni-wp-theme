@@ -82,4 +82,7 @@ function init_widgets($id) {
 
 // Widget
 add_action('widgets_init', 'init_widgets');
+
+// Customizer
+require get_template_directory().'/inc/customizer.php';
 ?>

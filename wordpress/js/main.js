@@ -45,7 +45,28 @@ window.onload = function() {
     }
   }
 
+  let sectionIndex = 0;
+  function keypressHandler(event) {
+    event = event || window.event;
+    if(event.keyCode == '38') {
+      // up arrow
+      sectionIndex = sectionIndex - 1 < 0 ? sectionIndex : --sectionIndex;
+      sections.item(sectionIndex).scrollIntoView({
+        behavior: 'smooth'
+      });
+      console.log("Executed key up, index : " + sectionIndex);
+    } else if (event.keyCode == '40') {
+      // down arrow
+      sectionIndex = sectionIndex + 1 >= sections.length ? sectionIndex : ++sectionIndex;
+      sections.item(sectionIndex).scrollIntoView({
+        behavior: 'smooth'
+      });
+      console.log("Executed key down, index : " + sectionIndex);
+    }
+  }
+
   light.addEventListener("click", lightHandler);
   projectsLink.addEventListener("click", submenuHandler);
+  document.addEventListener("keydown", keypressHandler);
 
 }

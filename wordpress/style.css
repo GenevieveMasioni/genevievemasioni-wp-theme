@@ -53,7 +53,7 @@ Table of Contents:
   --shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
   --shadow-blur: 0 30px 60px 0 rgba(0,0,0,0.11);
   --radius: .3rem;
-  --border: .07rem solid var(--color-text);
+  --border: .125rem solid var(--color-text);
 }
 
 html, body {
@@ -193,11 +193,8 @@ form * {
 }
 
 input, textarea {
-  border: var(--border);
-}
-
-input, textarea {
   border-bottom: var(--border);
+  padding: .5rem;
 }
 
 textarea {
@@ -207,6 +204,8 @@ textarea {
 button {
   border: var(--border);
   padding: var(--base-padding) var(--base-margin);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 button:hover {
@@ -290,6 +289,7 @@ header {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 101;
 }
 
 /************************************************
@@ -333,7 +333,7 @@ header {
   padding-top: var(--large-margin);
 }
 
-.img-col, .img-col * {
+.img-col {
   overflow: hidden;
 }
 
@@ -364,7 +364,7 @@ ul {
   list-style: none;
 }
 
-.column li:before {
+.column.text-col li:before {
   content: "→";
   padding-right: var(--base-padding);
 }
@@ -438,30 +438,9 @@ ul {
 3.3	Page
 ************************************************/
 
-/* .page {
-  width: 70%;
-  margin: auto;
-}
-
-.page-header {
-  margin-bottom: var(--large-margin);
-} */
-
 /************************************************
 4.	FOOTER
 ************************************************/
-
-/* footer {
-  margin-top: var(--large-margin);
-}
-
-footer a {
-  color: var(--color-grey);
-}
-
-.copyright {
-  margin-top: var(--base-margin);
-} */
 
 /************************************************
 4.1	Widget
@@ -479,16 +458,3 @@ footer a {
 .widget-section-2 .col-1 {
   width: 66.66%;
 }
-/*
-.widget ul {
-  list-style: none;
-  padding: 0;
-}
-
-.widget li {
-  margin: var(--base-padding) auto;
-}
-
-.widgets:last-child {
-  align-self: flex-end;
-} */

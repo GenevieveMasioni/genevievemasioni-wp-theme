@@ -7,7 +7,7 @@
   <meta name="author" content="<?php bloginfo('author'); ?>">
   <title><?php bloginfo('name'); ?></title>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/css/responsive.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <style media="screen">
@@ -39,5 +39,5 @@
     </nav>
   </header>
   <main id="main">
-    <i class="fa fa-sun fa-2x light-toggle"></i>
+    <i class="fa fa-toggle-off fa-2x light-toggle"></i>
     <?php $counter = 0; ?>

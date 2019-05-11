@@ -12,19 +12,19 @@ window.onload = function() {
   sections.forEach((sec) => sec.style.minHeight = window.innerHeight + "px");
 
   function lightOn() {
-    light.classList.replace("fa-sun", "fa-moon");
+    light.classList.replace("fa-toggle-off", "fa-toggle-on");
     root.style.setProperty('--color-primary', 'black');
     root.style.setProperty('--color-bg', '#fcfcfc');
-    root.style.setProperty('--color-text', '#222020');
+    root.style.setProperty('--color-text', '#111');
     root.style.setProperty('--color-accent', '#f6f6f6');
   }
 
   function lightOff() {
-    light.classList.replace("fa-moon", "fa-sun");
+    light.classList.replace("fa-toggle-on", "fa-toggle-off");
     root.style.setProperty('--color-primary', 'white');
     root.style.setProperty('--color-bg', 'black');
     root.style.setProperty('--color-text', '#fcfcfc');
-    root.style.setProperty('--color-accent', '#222020');
+    root.style.setProperty('--color-accent', '#111');
   }
 
   var lightMode = false;
@@ -54,14 +54,12 @@ window.onload = function() {
       sections.item(sectionIndex).scrollIntoView({
         behavior: 'smooth'
       });
-      console.log("Executed key up, index : " + sectionIndex);
     } else if (event.keyCode == '40') {
       // down arrow
       sectionIndex = sectionIndex + 1 >= sections.length ? sectionIndex : ++sectionIndex;
       sections.item(sectionIndex).scrollIntoView({
         behavior: 'smooth'
       });
-      console.log("Executed key down, index : " + sectionIndex);
     }
   }
 

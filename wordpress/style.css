@@ -307,6 +307,10 @@ header {
 3.1	Layout
 ************************************************/
 
+section, article {
+  border: var(--border);
+}
+
 .section {
   overflow: hidden;
 }
